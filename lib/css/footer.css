@@ -1,0 +1,33 @@
+@import url(http://fonts.googleapis.com/css?family=Kaushan+Script);
+
+a {
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+footer {
+	color: #ff8800;
+	background-color: #c00;
+	float: right;
+	font-family: 'Kaushan Script', cursive;
+	height: auto;
+	padding: 2px 5px;
+	position: absolute;
+	right: 0;
+	z-index: 1000;
+}
+footer a {
+	color: #ff9494;
+	text-decoration: none;
+}
+.blue {
+	background-color: #0fa1d3;
+	color: #50c0e9;
+}
+.blue a {
+	color: #a8dff4;
+}
+.blue a:hover{
+	color: #fff;
+}

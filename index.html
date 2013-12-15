@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<title>What makes you beautiful</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="lib/c.css">
+<link rel="stylesheet" href="//baka.linkstrifer.com/footer.css">
+<script src="//scripts.linkstrifer.com/jquery/last.js"></script>
+<script>
+	var fontsize = 20;
+	var tempo = [0,6,9,11,15,17,19,23,27,30,34,38,42,44,46,49,53,57,59,63,68,70,72,76,78,80,84,88,91,95,99,103,105,108,110,115,118,121,124,127,141,145,149,153,155,157,161,164,168,170,173,176,180,184,186,188,194];
+	function plays() {
+		audio.play();
+		setInterval('lyric();',1000);
+	}
+	function lyric() {
+		for ( var i in tempo ){
+			var at = audio.currentTime;
+			at = parseInt(at)+1;
+			if( at == tempo[i] ){
+				siguiente(i);
+			}
+		}
+		setTimeout("lyricc()",196*1000);
+		setTimeout("lyriccc()",200*1000);
+	}
+
+	function siguiente(n) {
+		$("li.active").removeClass("active");
+		$("li:nth-child("+n+")").addClass("active");
+	}
+
+	function lyricc() {
+		$("li").addClass("final");
+		$("ul").css('padding-top','0');
+		$("li").css('height','auto');
+	}
+
+	function lyriccc() {
+		$("li").css('color','#222');
+		$("li").css('font-size','0.1pt');
+		$("li .l2").css('color','#c00');
+		$("li .l2").css('font-size',fontsize+'pt');
+		setTimeout("lyricccc()",10*1000);
+	}
+
+	function lyricccc() {
+		$("li").css('color','#c00');
+		$("li").css('font-size',fontsize+"pt");
+		audio.play();
+	}
+
+	function size() {
+		var wh = $(window).height();
+		var ww = $(window).width();
+		if( ww < '800' ){
+			$('body').addClass('m');
+			$('footer').css('visibility','hidden');
+			fontsize = 10;
+		}else{
+			$('body').removeClass('m');
+			$('footer').css('visibility','visible');
+			fontsize = 20;
+		}
+		$('body').height(wh);
+		$('body').width(ww);
+	}
+
+	$(document).ready(function() {
+			size();
+	});
+
+	$(window).resize(function() {
+			size();
+	});
+
+</script>
+<footer>
+	Hecho por @<a href="//twitter.com/linkstrifer" target="_blank">LinkStrifer</a> para @<a href="//twitter.com/utopicaa" target="_blank">Utopicaa</a>. <a href="//baka.linkstrifer.com">Regresar</a>
+	</br> What makes you beautiful - One Direction 
+</footer>
+<audio id="audio" preload>
+	<source src="00.mp3" type="audio/mp3" />
+	El navegador no soporta la etiqueta audio.
+</audio>
+<a class="a2" href="#" onclick="plays();">Play</a>
+<section>
+	<ul>
+		<li>You're' <font class="l2">i</font>nsecure</li>
+		<li>Don'the <font class="l2">know what</font> for</li>
+		<li>You're turn<font class="l2">i</font>ng heads when you walk through the door</li>
+		<li>Don't <font class="l2">need</font> make-up</li>
+		<li><font class="l2">To</font> cover up</li>
+		<li>Being the way that you are is enough</li>
+		<li>Everyone else in the room can see it</li>
+		<li>Everyone else but you</li>
+		<li>Baby you light up my world like nobody else</li>
+		<li>The way that your flip your hair gets me overwhelmed</li>
+		<li>But you when <font class="l2">smile,</font> at the ground it ain't hard to tell</li>
+		<li><font class="l2">You</font> don't know oh oh <font class="l2">,</font></li>
+		<li>You don't know you're beautiful</li>
+		<li>If <font class="l2">only you,</font> saw what I can see</li>
+		<li>You'll understand why I want you so desperately</li>
+		<li>Right now I'm looking at you and <font class="l2">I can't believe,</font></li>
+		<li>You don't know oh oh</li>
+		<li>You don't know <font class="l2">you're beautiful,</font> oh oh</li>
+		<li>But that's what makes you beautiful</li>
+		<li>So c-come on</li>
+		<li>You got it wrong</li>
+		<li>To prove I'm right I put it in a song</li>
+		<li>I don't know why</li>
+		<li>You're being shy</li>
+		<li>And turn away when I <font class="l2">look,</font> into your eyes</li>
+		<li><font class="l2">Everyone</font> else in the room<font class="l2"> can see it,</font></li>
+		<li>Everyone else but you</li>
+		<li>Baby you light up my world like nobody else</li>
+		<li>The way that you flip your hair gets me overwhelmed</li>
+		<li>But you when smile at the ground it ain't hard to tell</li>
+		<li>You don't know oh oh</li>
+		<li>You don't know you're beautiful</li>
+		<li>If only you saw what <font class="l2">I</font> can see</li>
+		<li>You'll understand why I want you so desperately</li>
+		<li>Right now I'm <font class="l2">lo</font>oking at you and I can't belie<font class="l2">ve</font></li>
+		<li><font class="l2">You</font> don't know oh oh</li>
+		<li>You don't know you're beautiful oh oh</li>
+		<li>But that's what makes you beautiful</li>
+		<li>NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA (2x)</li>
+		<li>Baby you light up my world like nobody else</li>
+		<li>The way that you flip your hair gets me overwhelmed</li>
+		<li>But you when smile at the ground it ain't hard to tell</li>
+		<li>You don't know oh oh</li>
+		<li>You don't know you're beautiful</li>
+		<li>Baby you light up my world like nobody else</li>
+		<li>The way that you flip your hair gets me overwhelmed</li>
+		<li>But you when smile at the ground it ain't hard to tell</li>
+		<li>You don't know oh oh</li>
+		<li>You don't know you're beautiful</li>
+		<li>If only you saw what I can see</li>
+		<li>You'll understand why I want you so desperately</li>
+		<li>Right now I'm looking at you and I can't believe</li>
+		<li>You don't know oh oh</li>
+		<li>You don't know you're beautiful oh oh</li>
+		<li>You don't know oh oh</li>
+		<li>But that's what makes you beautiful</li>
+</section>
